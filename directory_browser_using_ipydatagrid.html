@@ -13970,8 +13970,9 @@ if (!requirejs.specified('base/js/namespace')) {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Installation-and-usage">Installation and usage<a class="anchor-link" href="#Installation-and-usage">&#182;</a></h2><p>If you use the <strong>ipynb</strong> module, you can import this whole notebook as if it were a Python module like this:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ipynb.fs.defs.directory_browser_using_ipydatagrid</span> <span class="kn">import</span> <span class="o">*</span>
+<h2 id="Installation-and-usage">Installation and usage<a class="anchor-link" href="#Installation-and-usage">&#182;</a></h2><p>If you use the <strong><a href="https://ipynb.readthedocs.io/en/stable/">ipynb</a></strong> module, you can import this whole notebook as if it were a Python module like this:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ipynb</span>
+<span class="kn">from</span> <span class="nn">ipynb.fs.defs.directory_browser_using_ipydatagrid</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 <p>and then you can create a directory browser widget like this:</p>
 <div class="highlight"><pre><span></span><span class="n">fpt</span> <span class="o">=</span> <span class="n">filepaths_table</span><span class="p">(</span><span class="n">initial_path</span><span class="o">=</span><span class="s2">&quot;/usr/local/bin&quot;</span><span class="p">)</span>
