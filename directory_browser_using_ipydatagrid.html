@@ -13971,10 +13971,11 @@ if (!requirejs.specified('base/js/namespace')) {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Installation-and-usage">Installation and usage<a class="anchor-link" href="#Installation-and-usage">&#182;</a></h2><p>If you use the <strong>ipynb</strong> module, you can import this whole notebook as if it were a Python module like this:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ipynb.fs.defs.filepaths_table</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ipynb.fs.defs.directory_browser_using_ipydatagrid</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 <p>and then you can create a directory browser widget like this:</p>
 <div class="highlight"><pre><span></span><span class="n">fpt</span> <span class="o">=</span> <span class="n">filepaths_table</span><span class="p">(</span><span class="n">initial_path</span><span class="o">=</span><span class="s2">&quot;/usr/local/bin&quot;</span><span class="p">)</span>
+<span class="n">fpt</span>
 </pre></div>
 <p>You can install this notebook as a library like this:</p>
 <p><code>pip install 'git+https://github.com/mister-average/directory_browser_using_ipydatagrid.git'</code></p>
@@ -13999,7 +14000,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">glob</span><span class="o">,</span> <span class="nn">stat</span><span class="o">,</span> <span class="nn">pwd</span><span class="o">,</span> <span class="nn">grp</span><span class="o">,</span> <span class="nn">sys</span>
@@ -14012,7 +14013,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">IPython</span>
@@ -14025,7 +14026,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
@@ -14038,7 +14039,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ipydatagrid</span> <span class="kn">import</span> <span class="n">DataGrid</span><span class="p">,</span> <span class="n">TextRenderer</span><span class="p">,</span> <span class="n">BarRenderer</span><span class="p">,</span> <span class="n">VegaExpr</span><span class="p">,</span> <span class="n">Expr</span>
@@ -14055,7 +14056,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">py2vega.main</span> <span class="kn">import</span> <span class="n">VegaExpressionVisitor</span>
@@ -14068,7 +14069,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pprint</span>
@@ -14081,7 +14082,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
@@ -14094,7 +14095,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">cycle</span>
@@ -14115,7 +14116,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">nothing_is_hidden</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
@@ -14141,7 +14142,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">py2vega_without_inspect</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">whitelist</span><span class="o">=</span><span class="p">[]):</span>
@@ -14170,7 +14171,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Expr_without_inspect</span><span class="p">(</span><span class="n">VegaExpr</span><span class="p">):</span>
@@ -14210,7 +14211,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">ipywidgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">):</span>
@@ -14333,7 +14334,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -14479,7 +14480,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -14536,7 +14537,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -14705,7 +14706,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -14775,7 +14776,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -14798,7 +14799,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -14820,7 +14821,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -14857,7 +14858,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -14894,7 +14895,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -14922,7 +14923,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -14969,7 +14970,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -14994,7 +14995,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -15037,7 +15038,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -15080,7 +15081,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -15112,7 +15113,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -15137,7 +15138,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -15167,7 +15168,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -15191,7 +15192,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -15332,7 +15333,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">filepaths_table</span><span class="p">(</span><span class="n">filepaths_table</span><span class="p">):</span>
@@ -15378,7 +15379,7 @@ if (!requirejs.specified('base/js/namespace')) {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
@@ -15394,41 +15395,6 @@ if (!requirejs.specified('base/js/namespace')) {
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<style>
-.hbox_style{
-    background-color:lightgray;
-}
-</style></div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_text output_subarea ">
-<pre>filepaths_table(children=(HBox(children=(Button(icon=&#39;check&#39;, layout=Layout(align_content=&#39;center&#39;, align_item…</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
